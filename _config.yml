@@ -1,0 +1,36 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+title: Frank Manns
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Frank Manns
+
+description: Stylish Jekyll Theme
+author:
+  name: Frank Manns
+  github: fmanns
+  twitter: frmanns
+  linkedin: frankmanns
+  bio: iOS Developer at Appian Corporation
+  email_md5: e673356eed47e1f9ae07368031450f5d
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+plugins:
+  - jekyll-paginate
