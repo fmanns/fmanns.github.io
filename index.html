@@ -3,6 +3,7 @@ layout: page
 tagline:
 ---
 
+{% if paginator.total_posts > 0 %}
 {% for post in paginator.posts %}
 
 <article class="home">
@@ -39,9 +40,12 @@ tagline:
 
 </article>
 {% endfor %}
+{% else %}
+<span>There are no posts</span>
+{% endif %}
 <hr/>
 
-<ul class="pager"> 
+<ul class="pager">
 
   {% if paginator.previous_page %}
   <li class="previous">
@@ -56,9 +60,9 @@ tagline:
     <a>&larr; Newer</a>
   </li>
   {% endif %}
-  
+
   <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="page_number">Page: {{ paginator.page | default: 1 }} of {{ paginator.total_pages | default: 1 }}</span>
   </li>
 
   {% if paginator.next_page %}
@@ -67,7 +71,7 @@ tagline:
   </li>
   {% else %}
   <li class="next disabled">
-    <a>Older &rarr;</a>        
+    <a>Older &rarr;</a>
   </li>
   {% endif %}
 
