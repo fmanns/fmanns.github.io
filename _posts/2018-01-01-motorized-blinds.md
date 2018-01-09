@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Motorized Blinds
+title: Arduino Controlled Blinds
 tags: [electronics, Arduino, programming, 3D printing]
 description: An Arduino project which opens vertical blinds at sunrise and closes them at sunset.
 ---
